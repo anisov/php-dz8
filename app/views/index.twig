@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Api</title>
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="wrapper">
+    <div class="container">
+        <div class="button">
+            <button class="button__show" type="submit">Показать все товары</button>
+            <button class="button__add" type="submit">Добавить товар</button>
+        </div>
+        <div class="table">
+            <table class="table__product">
+                <th class="table__title">Наименование</th>
+                <th class="table__title">Цена</th>
+                <th class="table__title">Категоря</th>
+                <th class="table__title">Действие</th>
+                <tbody class="table__body">
+                    <tr>
+                        <td class="table__td">1</td>
+                        <td class="table__td">2</td>
+                        <td class="table__td">3</td>
+                        <td class="table__td">4</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div id="modal_form" class="modal">
+    <form class="modal__form js-put">
+        <label for="name">Наименование: </label>
+        <input required type="text" class="modal__input" name="name" placeholder="Наименование">
+        <label for="name">Цена: </label>
+        <input required type="text" class="modal__input" name="price" placeholder="Цена">
+        <input required type="text" class="hidden" id="modal-id" name="id" placeholder="Цена">
+        <button class="modal-submit">Изменить</button>
+    </form>
+    <span class="modal__close" id="modal_close">X</span>
+</div>
+<div class="overlay" id="overlay"></div>
+
+<div id="modal_form-add" class="modal">
+    <form class="modal__form js-add" action="/products">
+        <label for="name">Наименование: </label>
+        <input required type="text" class="modal__input" name="name" placeholder="Наименование">
+        <label for="name">Цена: </label>
+        <input required type="text" class="modal__input" name="price" placeholder="Цена">
+        <label for="name">Категория: </label>
+        <input required type="text" class="modal__input" name="category_id" placeholder="Категория">
+        <button class="modal-submit">Добавить</button>
+    </form>
+    <span class="modal__close" id="modal_close">X</span>
+</div>
+<div class="overlay" id="overlay"></div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>
